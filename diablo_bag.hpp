@@ -49,9 +49,9 @@ class DiabloBag
 
 
 	public:
-		/* 
+        /* 
          * Usage: when bag is cloesed and nothing is on hand, 
-		          system will pick item automaticly.
+                  system will pick item automaticly.
          * Return: 1. flase means that bag has not enough vacancy for 'new' item.
                    2. true means that automatic place item sucessfully.
          */
