@@ -50,22 +50,22 @@ class DiabloBag
 
 	public:
 		/* 
-		 * Usage: when bag is cloesed and nothing is on hand, 
+         * Usage: when bag is cloesed and nothing is on hand, 
 		          system will pick item automaticly.
-	     * Return: 1. flase means that bag has not enough vacancy for 'new' item.
-				   2. true means that automatic place item sucessfully.
-		 */
+         * Return: 1. flase means that bag has not enough vacancy for 'new' item.
+                   2. true means that automatic place item sucessfully.
+         */
 		bool auto_pick_up_items(struct bag_unit *item);
 
-		/* 
-		 * Usage: place the item on hand in the target location(target_loc).
-	     * Return: 1. NULL means that some parameter are illegal.
-				   2. what return value equal item means that place failed, item is still on hand.
-				   3. what return value is zero(not NULL) means that place in empty vacancy without exchange,
-				      so nothing on hand.
-				   4. what return value is not equal item means that place in one item vacancy with exchange,
-				      so the item in the bag originally is on hand now.
-		 */
+        /* 
+         * Usage: place the item on hand in the target location(target_loc).
+         * Return: 1. NULL means that some parameter are illegal.
+                   2. what return value equal item means that place failed, item is still on hand.
+                   3. what return value is zero(not NULL) means that place in empty vacancy without exchange,
+                      so nothing on hand.
+                   4. what return value is not equal item means that place in one item vacancy with exchange,
+                      so the item in the bag originally is on hand now.
+        */
 		struct bag_unit *place_items(struct bag_unit *item, uint32_t target_loc);
 
 		/* Put the item in the bag on hand */
